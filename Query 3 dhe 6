@@ -1,0 +1,22 @@
+//3
+Select h.Leid
+From Huazimi_Librit h
+Where h.Leid(h.Data_kthimit between "2020-12-01" and "2020-12-31")
+and h.Leid (h.Afati_kthimit >= Data_kthimit);
+
+//6
+Select d.Vitiiregjistrimit, Sum(d.Çmimiiregjistrimit)
+From Detajet_Lexuesit d
+Where d.Vitiiregjistrimit="2019";
+
+UNION
+
+Select d.Vitiiregjistrimit, Sum(d.Çmimiiregjistrimit)
+From Detajet_Lexuesit d
+Where d.Vitiiregjistrimit="2020";
+
+UNION
+
+Select d.Vitiiregjistrimit, Sum(d.Çmimiiregjistrimit)
+From Detajet_Lexuesit d
+Where d.Vitiiregjistrimit="2021";
